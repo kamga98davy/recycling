@@ -1,0 +1,71 @@
+{
+    "joueur": {
+        "nom": "Explorateur",
+        "energie": 10,
+        "ressources": {
+            "eau": 1,
+            "nourriture": 1,
+            "pierre": 0
+        }
+    },
+    "objectif": {
+        "eau": 4,
+        "nourriture": 4,
+        "pierre": 5
+    },
+    "lieux": [
+        {
+            "nom": "La Place Centrale",
+            "description": "Une grande place couverte de sable. Des colonnes brisées entourent une fontaine sèche.",
+            "ressource": "pierre",
+            "quantite": 3,
+            "personnage": "Ama"
+        },
+        {
+            "nom": "Le Puits Ancien",
+            "description": "Un puits profond. On entend l'eau couler tout au fond.",
+            "ressource": "eau",
+            "quantite": 2,
+            "personnage": "Kofi"
+        },
+        {
+            "nom": "Le Temple en Ruine",
+            "description": "Des statues effacées gardent l'entrée. Un parfum de fruits flotte dans l'air.",
+            "ressource": "nourriture",
+            "quantite": 2,
+            "personnage": "Le Gardien"
+        },
+        {
+            "nom": "Les Remparts",
+            "description": "Un mur effondré longe la cité. Des blocs de pierre taillée jonchent le sol.",
+            "ressource": "pierre",
+            "quantite": 3,
+            "personnage": null
+        }
+    ],
+    "personnages": {
+        "Ama": {
+            "type": "allie",
+            "dialogue": "Bienvenue, voyageur ! Prends ces provisions, tu en auras besoin.",
+            "cadeau": {
+                "nourriture": 2
+            },
+            "deja_rencontre": false
+        },
+        "Le Gardien": {
+            "type": "ennemi",
+            "dialogue": "Nul n'entre ici sans résoudre mon énigme !",
+            "question": "Combien font 7 fois 8 ?",
+            "reponse": "56",
+            "deja_rencontre": false
+        },
+        "Kofi": {
+            "type": "allie",
+            "dialogue": "Je garde ce puits depuis des années. Remplis tes gourdes !",
+            "cadeau": {
+                "eau": 2
+            },
+            "deja_rencontre": false
+        }
+    }
+}
