@@ -35,6 +35,36 @@ def afficher_objectif(joueur,objectif):
     for ressource in joueur["ressources"].keys():
         print(f"{ressource} : {joueur['ressources'][ressource]} / {objectif[ressource]}")
 
+def afficher_menu():
+    print()
+    print("Que veux-tu faire ?")
+    print("  1. Explorer un lieu")
+    print("  2. Voir mon état")
+    print("  3. Quitter")
+
+def jouer(donnees):
+    joueur = donnees["joueur"]
+    lieux = donnees["lieux"]
+
+    print("Bienvenue dans les Cités Perdues !")
+    afficher_etat(joueur)
+
+    en_cours = True
+    while en_cours:
+        afficher_menu()
+        choix = input("Ton choix : ")
+
+        if choix == "1":
+            afficher_lieux(lieux)
+            print("(L'exploration arrive à l'étape 4.)")
+        elif choix == "2":
+            afficher_etat(joueur)
+            afficher_objectif(joueur, donnees["objectif"])
+        elif choix == "3":
+            print("À bientôt, explorateur !")
+            en_cours = False
+        else:
+            print("Choix invalide, tape 1, 2 ou 3.")
 
 joueur = data["joueur"]
 lieux = data["lieux"]
@@ -44,3 +74,4 @@ objectif = data["objectif"]
 afficher_etat(joueur)
 afficher_lieux(lieux)
 afficher_objectif(joueur, objectif)
+jouer(data)
